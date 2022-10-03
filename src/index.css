@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: arial;
+    src: url(./vendors/font/Helvetica.ttf);
+}
+
+body {
+    background-color: #FDFDFD;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #151515;
+}
+
+section .section-subtitle {
+    font-size: 30px;
+    font-weight: 600;
+    color: #151515;
+}
+
+section .section-description {
+    color: #8a8a8a;
+}
+
+.btn-primary {
+    background-color: #5CB85F;
+    color: #FFFFFF;
+    border: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color: #F1F3FF;
+    border: 2px solid;
+    color: #5CB85F;
+}
+
+.btn-outline-primary-store {
+    border: 1px solid #0D28A6;
+    color: #151515;
+}
+
+.btn-secondary {
+    color: #0D28A6;
+    border: 2px solid #0D28A6;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.btn-secondary:hover {
+    background-color: #0D28A6;
+    border: 2px solid;
+    color: #FFFFFF;
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #F1F3FF;
+    height: 120px;
+    color: #0D28A6;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+nav .slide {
+    top: -1000px;
+}
+
+nav ul {
+    list-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /*Toggle
+*/
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        top: 0px;
+        right: 300px;
+        height: 100vh;
+        width: 300px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        background-color: #F1F3FF;
+        z-index: 1;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+}
+
+nav ul li a {
+    color: #151515;
+    text-decoration: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+nav ul li a:hover {
+    color: #0D28A6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav .menu-toggle {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 20px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav .menu-toggle input {
+    position: absolute;
+    width: 52px;
+    height: 38px;
+    opacity: 0;
+    left: -14px;
+    top: -6px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav .menu-toggle input:checked~span:nth-child(2) {
+    -webkit-transform: rotate(45deg) translate(0px, -5px);
+    transform: rotate(45deg) translate(0px, -5px);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+nav .menu-toggle input:checked~span:nth-child(4) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+nav .menu-toggle input:checked~span:nth-child(3) {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+nav .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #151515;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 576px) {
+    nav .menu-toggle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 1;
+    }
+}
+
+
+/*Animation
+*/
+
+.subscribe .form-subscribe {
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border: 1px solid #F7F0EA;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .subscribe .form-subscribe {
+        width: 100%;
+    }
+}
+
+.subscribe .form-subscribe input {
+    width: 70%;
+    border: none;
+}
+
+.subscribe .form-subscribe input:focus {
+    outline: none;
+}
+
+.card {
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.card:hover {
+    margin-left: -10px;
+}
+
+.card .card-body .card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .card-body .card-description {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card .card-body .card-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer .section-description {
+    margin-top: 40px;
+    font-weight: 400;
+    color: #151515;
+}
+
+.footer .copyright {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #151515;
+}
+
+.footer .footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #151515;
+    margin-bottom: 18px;
+}
+
+.footer .footer-link {
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    color: #151515;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.footer .footer-link:hover {
+    color: #0D28A6;
+    font-weight: bold;
+}
+
+.footer .socials .social-link {
+    width: 42px;
+    height: 42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #0D28A6;
+    color: #FFFFFF;
+    border-radius: 50px;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.footer .socials .social-link:hover {
+    background-color: #FFFFFF;
+    color: #0D28A6;
+    border: 1px solid #0D28A6;
+}
+
+.navheader {
+    background-color: #F1F3FF;
+}
+
+.header {
+    background-color: #F1F3FF;
+    position: relative;
+    padding-top: 50px;
+}
+
+.header .header-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #151515;
+    margin-bottom: 10px;
+}
+
+.header .header-description {
+    color: #151515;
+    margin-bottom: 30px;
+}
+
+.header .header-image {
+    width: 850px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .header .header-title {
+        font-size: 36px;
+        margin-top: -50px;
+    }
+}
+
+
+/*Cari Mobil*/
+
+.headers {
+    background-color: #F1F3FF;
+    position: relative;
+    padding-top: 50px;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.content .content-title {
+    margin-top: 100px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #151515;
+}
+
+.content .content-description {
+    color: #151515;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content .content-image {
+    width: 80%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.content .content-icon {
+    width: 24px;
+}
+
+.content .content-point {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.why {
+    margin-top: 100px;
+}
+
+.why .why-title {
+    margin-top: -10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #151515;
+}
+
+.why .why-description {
+    color: #151515;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonial {
+    margin-top: 100px;
+}
+
+.testimonial .swiper {
+    margin-top: 50px;
+}
+
+.testimonial .swiper .swiper-slide .card {
+    background-color: black;
+}
+
+.sewa .header .header-title {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.sewa .header .header-description {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.search {
+    padding: 36px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-top: -50px;
+    position: relative;
+    border-bottom: 3px solid #CCCCCC;
+    border-left: 2px solid #CCCCCC;
+    border-right: 2px solid #CCCCCC;
+}
+
+.search .input-select {
+    height: 32px;
+    width: 256px;
+    font-size: 12px;
+    border: 2px solid #CCCCCC;
+    color: #CCCCCC;
+    padding: 5px 10px;
+}
+
+.search .inline {
+    width: 100px;
+    border: 1px solid black;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.search .search-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #151515;
+}
+
+.search .search-title span {
+    color: #151515;
+}
+
+.search .search-subtitle {
+    color: #151515;
+}
+
+@media screen and (max-width: 768px) {
+    .search .search-items {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 10px !important;
+    }
+    .search .search-items .inline {
+        width: 70%;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding-bottom: 150px;
+        margin-bottom: 100px;
+    }
+    .header .header-image {
+        top: 460px;
+        right: 0;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px) and (max-width: 768px) {
+    .header .header-title {
+        font-size: 36px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        margin-top: 50px;
+    }
+    .why {
+        margin-top: 50px;
+    }
+    .testimonial {
+        margin-top: 50px;
+    }
+    .why .why-title {
+        text-align: center;
+    }
+    .sewa {
+        margin-top: -60px;
+    }
+    .faq {
+        margin-top: -150px;
+    }
+    .sewa .header .header-title {
+        padding-top: 60px;
+    }
+    .footer {
+        margin-top: -80px;
+    }
+    .search {
+        border-top: 2px solid #CCCCCC;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    /*Cari dan detail Mobil*/
+    .headers {
+        display: none;
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */
